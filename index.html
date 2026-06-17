@@ -16,15 +16,18 @@
     font-family:'Segoe UI',Arial,sans-serif;
 }
 
+
 html,body{
+
     width:100%;
     height:100%;
     overflow:hidden;
     color:#3b2b35;
+
 }
 
 
-/* BACKGROUND LIKE POOKIE SMP */
+/* BACKGROUND */
 
 body{
 
@@ -40,8 +43,7 @@ body{
 }
 
 
-
-/* SOFT PARTICLES */
+/* PARTICLES */
 
 body::before{
 
@@ -80,8 +82,6 @@ transform:translate(-350px,-350px);
 
 
 
-
-
 /* HEADER */
 
 .header{
@@ -117,7 +117,6 @@ box-shadow:
 
 
 
-
 .logo{
 
 font-size:26px;
@@ -127,8 +126,6 @@ font-weight:900;
 letter-spacing:2px;
 
 color:#8d4b60;
-
-text-shadow:none;
 
 }
 
@@ -142,17 +139,13 @@ display:flex;
 
 gap:14px;
 
-flex-wrap:wrap;
-
-justify-content:flex-end;
-
 }
 
 
 
 .menu button{
 
-padding:13px 22px;
+padding:13px 35px;
 
 border-radius:35px;
 
@@ -192,8 +185,6 @@ box-shadow:
 
 
 
-
-
 /* STATUS */
 
 .status{
@@ -214,9 +205,6 @@ background:
 rgba(255,255,255,.85);
 
 
-border:none;
-
-
 font-weight:bold;
 
 
@@ -228,8 +216,6 @@ box-shadow:
 
 
 }
-
-
 
 
 
@@ -258,16 +244,11 @@ background:#202020;
 border-radius:20px;
 
 
-border:none;
-
-
 box-shadow:
 0 25px 70px rgba(80,40,60,.25);
 
 
 }
-
-
 
 
 
@@ -297,8 +278,6 @@ background:#8d4b60;
 border-radius:20px;
 
 }
-
-
 
 
 
@@ -356,8 +335,6 @@ display:flex;
 
 
 
-
-
 /* FULLSCREEN */
 
 
@@ -406,8 +383,6 @@ transform:scale(1.08);
 
 
 
-
-
 /* MOBILE */
 
 @media(max-width:900px){
@@ -434,6 +409,8 @@ border-radius:30px;
 font-size:22px;
 
 margin-bottom:15px;
+
+text-align:center;
 
 }
 
@@ -462,7 +439,6 @@ width:95%;
 </head>
 
 
-
 <body>
 
 
@@ -480,55 +456,32 @@ Khushi Gaming PvP Tournament
 <div class="menu">
 
 
-<button class="active" onclick="change(this,'pookiesmp_netheritepvp')">
-Netherite
+<button class="active" onclick="change(this,'https://challonge.com/pookismp_final_java/module')">
+
+JAVA
+
 </button>
 
 
-<button onclick="change(this,'pookiesmp_macepvp')">
-Mace
-</button>
+<button onclick="change(this,'https://challonge.com/pookismp_final_bedrock/module')">
 
+BEDROCK
 
-<button onclick="change(this,'pookiesmp_diamondpvp')">
-Diamond
-</button>
-
-
-<button onclick="change(this,'pookiesmp_smpkit')">
-SMP Kit
-</button>
-
-
-<button onclick="change(this,'pookiesmp_pe_netheritepvp')">
-PE Netherite
-</button>
-
-
-<button onclick="change(this,'pookiesmp_pe_macepvp')">
-PE Mace
-</button>
-
-
-<button onclick="change(this,'pookiesmp_pe_diamondpvp')">
-PE Diamond
 </button>
 
 
 </div>
 
 </div>
-
 
 
 
 
 <div class="status" id="status">
 
-Viewing: Netherite PvP
+Viewing: JAVA Bracket
 
 </div>
-
 
 
 
@@ -550,7 +503,7 @@ id="frame"
 
 onload="finish()"
 
-src="https://challonge.com/pookiesmp_netheritepvp/module">
+src="https://challonge.com/pookismp_final_java/module">
 
 </iframe>
 
@@ -570,7 +523,6 @@ src="https://challonge.com/pookiesmp_netheritepvp/module">
 
 
 
-
 <script>
 
 
@@ -583,8 +535,7 @@ document.getElementById("loader");
 
 
 
-
-function change(btn,id){
+function change(btn,url){
 
 
 loader.classList.add("show");
@@ -597,12 +548,10 @@ frame.style.opacity="0";
 setTimeout(()=>{
 
 
-frame.src =
-"https://challonge.com/"+id+"/module";
+frame.src=url;
 
 
 },300);
-
 
 
 
@@ -622,7 +571,7 @@ btn.classList.add("active");
 
 document.getElementById("status").innerHTML =
 
-"Viewing: " + btn.innerText + " PvP";
+"Viewing: " + btn.innerText + " Bracket";
 
 
 }
@@ -644,7 +593,6 @@ frame.style.opacity="1";
 
 
 
-
 function full(){
 
 
@@ -655,9 +603,7 @@ document.querySelector(".bracket")
 }
 
 
-
 </script>
-
 
 
 </body>
